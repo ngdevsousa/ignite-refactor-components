@@ -4,6 +4,7 @@ import { FiCheckSquare } from "react-icons/fi";
 import { Form } from "./styles";
 import { Modal } from "../Modal";
 import { Input } from "../Input";
+import { IFood } from "../Food";
 
 interface ModalEditFoodProps {
   isOpen: boolean;
@@ -12,14 +13,7 @@ interface ModalEditFoodProps {
   handleUpdateFood: (data: SubmitPayload) => void;
 }
 
-interface SubmitPayload {
-  id: number;
-  available: boolean;
-  image: string;
-  name: string;
-  price: string;
-  description: string;
-}
+interface SubmitPayload extends IFood {}
 
 export function ModalEditFood({
   editingFood,
